@@ -8,7 +8,7 @@ namespace ConsoleAppDelegatesCSharp
         public delegate void test(string nombre);
         delegate int delegadoSumar(int num1, int num2);
         delegate string delegadoHW();
-        delegate void test2;
+        delegate void test2();
         static void Main(string[] args)
         {
             //Ejemplo delegado 1, configado desde la propiedad de tipo de delegado que puede asignarsele un metodo en su constructor
