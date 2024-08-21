@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 
 namespace ConsoleAppDelegatesCSharp
 {
     class Program
     {
-
+         //Clase main para Delegados
         public delegate void test(string nombre);
         delegate int delegadoSumar(int num1, int num2);
         delegate string delegadoHW();
