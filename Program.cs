@@ -7,6 +7,8 @@ namespace ConsoleAppDelegatesCSharp
 
         public delegate void test(string nombre);
         delegate int delegadoSumar(int num1, int num2);
+        delegate string delegadoHW();
+        delegate void test2;
         static void Main(string[] args)
         {
             //Ejemplo delegado 1, configado desde la propiedad de tipo de delegado que puede asignarsele un metodo en su constructor
@@ -20,6 +22,13 @@ namespace ConsoleAppDelegatesCSharp
             delegadoSumar metodoSumar = new delegadoSumar(sumar);
             int sumatoria = metodoSumar(1, 3);
 
+            //Ejemplo 3: En este caso tenemos un delegado en el cual asignamos un metodo anonimo
+            delegadoHW delegadoHelloWorld = delegate () { return "Hello world";  };
+            string mensajeRetornado  = delegadoHelloWorld(); //aqui invocamos el delegado y nos retorna el mensaje Hello world
+
+            //Ejemplo 4:
+            test2 delegadoSms = delegate () { Console.WriteLine("Test Sms"); };
+            delegadoSms();
 
         }
         
